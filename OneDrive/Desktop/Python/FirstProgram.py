@@ -198,15 +198,113 @@ movies.append(mov3)
 
 print(movies)"""
 
+
 #loop
 """count = 1
-while count <= 5 :
+while count <= 5:
     print("hello")
     count += 1
-print(count)    """
 
-i = 1
-while i <= 5:
-    print("hello",i)
+print(count)  """  
+
+
+"""i = 1
+while i<=5:
+    print("heloo",i)
+    i += 1   
+"""
+
+#Print value from 1 to 10
+"""i = 1
+while i <= 10:
+    print(i)
     i += 1
-   
+print("loop Ended",)"""
+
+#print value from 10 to 1
+"""i = 10
+while i >= 1:
+    print(i)
+    i -= 1
+print("loop Ended")"""
+
+
+
+#print numbers from 1 to 200
+"""i = 1
+while i<=100:
+    print(i)
+    i+=1
+print("loop Ended",)"""
+
+#Print number from 100 to 1
+"""
+i = 100
+while i>=1:
+    print(i)
+    i-=1
+print("loop ended")
+"""
+
+#Print the multiplication table of a number n(table of 3)
+"""i = 1
+while i<=10:
+    print(3*i)
+    i+=1
+print("Table of 3")"""
+
+#print any table multiplication table of a number n
+"""n = int(input("Enter the number: "))
+i=1
+while i<=10:
+    print(n*i)
+    i+=1
+print("Table of n")"""
+
+#Print the element of the following list using while loop:
+#[1,4,9,16,25,36,49,64,81,100]
+"""
+nums=[1,4,9,16,25,36,49,64,81,100]
+idx = 0
+while idx < len(nums):
+    print(nums [idx])
+    idx+=1"""
+
+
+#Print a set of given tables in loop
+#[ironman, thor, hulk, captain america, black widow]
+"""heroes = ["ironman", "thor", "hulk", "captain america", "black widow"]
+idx = 0
+while idx < len(heroes):
+    print(heroes[idx])
+    idx+=1"""
+#Print places in loop
+#[delhi, mumbai, kolkata, chennai, bangalore]
+"""places=["delhi", "mumbai", "kolkata", "chennai", "bangalore"]
+idx = 0
+while idx < len(places):
+    print(places[idx])
+    idx+=1"""
+
+#Search for a numbeer x in the giiven tuple using a loop:
+#(2,4,6,8,10,12,14,16,18,20)
+"""
+nums = (2,4,6,8,10,12,14,16,18,20)
+x = int(input("Enter the number to search: "))
+i = 0
+while i < len(nums):
+    if(nums[i] == x):
+        print("number found at index :",i)
+    i += 1"""
+
+
+# Break statement
+"""nums = (2,4,6,8,10,12,14,16,18,20)
+x = 10
+i = 0
+while i < len(nums):
+    if(nums[i] == x):
+        print("number found at index :",i)
+        break
+    i += 1
+print ("loop ended")"""
