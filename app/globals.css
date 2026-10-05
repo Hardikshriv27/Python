@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+:root {
+  /* =========================================================
+     TRIUNE — CORE PALETTE
+     Obsidian / Ivory / Ember / Azure / Verdant
+     ========================================================= */
+
+  --color-ink: #07090d;
+  --color-ink-soft: #0d1117;
+  --color-ink-elevated: #121820;
+
+  --color-paper: #f3f0e8;
+  --color-paper-dim: #d8d5cd;
+
+  --color-slate: #8d96a5;
+  --color-slate-dim: #59616e;
+
+  --color-line: rgba(243, 240, 232, 0.09);
+  --color-line-soft: rgba(243, 240, 232, 0.05);
+
+  /* =========================================================
+     TRIUNE SPECTRUM
+     Matches the brand animation
+     ========================================================= */
+
+  --color-ember: #e2472d;
+  --color-azure: #3b8fe0;
+  --color-verdant: #3fbf8f;
+
+  /* Product accents */
+  --color-ims: #3b8fe0;
+  --color-ims-soft: #163452;
+
+  --color-cafe: #e68a45;
+  --color-cafe-soft: #422b1c;
+
+  --color-mero: #3fbf8f;
+  --color-mero-soft: #163a31;
+
+  /* =========================================================
+     TYPOGRAPHY
+     ========================================================= */
+
+  --font-display:
+  var(--font-manrope),
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  sans-serif;
+
+--font-body:
+  var(--font-inter),
+  "Helvetica Neue",
+  Helvetica,
+  Arial,
+  sans-serif;
+
+  /* Type scale */
+  --text-eyebrow: 0.68rem;
+  --text-caption: 0.72rem;
+  --text-small: 0.82rem;
+  --text-body: 1rem;
+  --text-body-large: 1.08rem;
+
+  /* Layout rhythm */
+  --content-max: 1280px;
+  --section-space: clamp(7rem, 12vw, 12rem);
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* =========================================================
+   LIGHT THEME
+   ========================================================= */
+
+:root[data-theme="light"] {
+  --color-ink: #f3f0e8;
+  --color-ink-soft: #ebe7de;
+  --color-ink-elevated: #e3dfd5;
+
+  --color-paper: #11161d;
+  --color-paper-dim: #343b46;
+
+  --color-slate: #626b78;
+  --color-slate-dim: #8a919c;
+
+  --color-line: rgba(17, 22, 29, 0.10);
+  --color-line-soft: rgba(17, 22, 29, 0.055);
+
+  --color-ims: #287fc9;
+  --color-ims-soft: #cbdff0;
+
+  --color-cafe: #c96f2f;
+  --color-cafe-soft: #ead5c3;
+
+  --color-mero: #27956f;
+  --color-mero-soft: #c7e3d8;
+}
+
+
+/* =========================================================
+   TAILWIND THEME BRIDGE
+   ========================================================= */
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-soft: var(--color-ink-soft);
+  --color-ink-elevated: var(--color-ink-elevated);
+
+  --color-paper: var(--color-paper);
+  --color-paper-dim: var(--color-paper-dim);
+
+  --color-slate: var(--color-slate);
+  --color-slate-dim: var(--color-slate-dim);
+
+  --color-ember: var(--color-ember);
+  --color-azure: var(--color-azure);
+  --color-verdant: var(--color-verdant);
+
+  --color-ims: var(--color-ims);
+  --color-ims-soft: var(--color-ims-soft);
+
+  --color-cafe: var(--color-cafe);
+  --color-cafe-soft: var(--color-cafe-soft);
+
+  --color-mero: var(--color-mero);
+  --color-mero-soft: var(--color-mero-soft);
+
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
+}
+
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  text-rendering: optimizeLegibility;
+
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY FOUNDATION
+   ========================================================= */
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  color: var(--color-paper);
+
+  font-weight: 500;
+
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   PREMIUM TEXT UTILITIES
+   ========================================================= */
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.tracking-brand {
+  letter-spacing: 0.18em;
+}
+
+.tracking-eyebrow {
+  letter-spacing: 0.28em;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+:focus-visible {
+  outline: 1px solid var(--color-azure);
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ink);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-slate-dim);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-slate);
+}
+
+
+/* =========================================================
+   HIDDEN SCROLLBAR
+   ========================================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+
+/* =========================================================
+   PREMIUM SURFACES
+   ========================================================= */
+
+.surface {
+  background: var(--color-ink-soft);
+  border: 1px solid var(--color-line);
+}
+
+.surface-elevated {
+  background: var(--color-ink-elevated);
+  border: 1px solid var(--color-line);
+}
+
+
+/* =========================================================
+   TRIUNE SPECTRUM
+   Subtle brand gradient — use sparingly.
+   ========================================================= */
+
+.triune-spectrum {
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-ember) 0%,
+      var(--color-azure) 52%,
+      var(--color-verdant) 100%
+    );
+}
+
+.triune-spectrum-text {
+  background:
+    linear-gradient(
+      90deg,
+      var(--color-ember) 0%,
+      var(--color-azure) 52%,
+      var(--color-verdant) 100%
+    );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+/* =========================================================
+   GLOBAL TRANSITIONS
+   ========================================================= */
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
